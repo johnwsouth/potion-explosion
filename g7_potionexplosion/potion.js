@@ -93,6 +93,7 @@ class Potion {
             gameMaster.dispenser.dispenserArray[randomNumber].push(tempDomElem);
           }
         }
+        gameMaster.dispenser.marbleClick();
 
       }
 

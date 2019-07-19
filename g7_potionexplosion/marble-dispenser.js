@@ -143,18 +143,7 @@ class MarbleDispenser {
 
 
   }
-  }
-
-
-
-
-
-
-
-
-
-
-
+}
 
   marbleClick() {
     $(".marble").on('click', this.marbleHandler);

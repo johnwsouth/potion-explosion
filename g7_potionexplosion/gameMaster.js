@@ -56,7 +56,9 @@ class GameMaster {
 
 
         }
+
       }
+
 
       }
       else if (gameMaster.player2.myTurn === true) {
@@ -76,6 +78,7 @@ class GameMaster {
         }
 
       }
+      gameMaster.dispenser.marbleClick();
     }
 
     generatePotionGameStart(){
