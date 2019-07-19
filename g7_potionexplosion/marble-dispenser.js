@@ -41,7 +41,7 @@ class MarbleDispenser {
 
 
   marbleHandler(event) {
-    debugger;
+
     console.log("This is the current display array: ", this.dispenserArray)
 
     this.marbleMatch = true;
@@ -51,13 +51,40 @@ class MarbleDispenser {
     var currentMarble = $(event.currentTarget);
     var marbleIndex = currentMarble.index();
     var marbleRowIndex = currentMarble.closest('.row').index();
+    if(marbleIndex +1 < 9){
     var currentMarbleBroIndex = marbleIndex + 1;
-    var currentMarbleSisIndex = marbleIndex - 1;
     var currentMarbleBro = this.dispenserArray[marbleRowIndex][marbleIndex + offset];
+    }
+    if(marbleIndex -1 >-1){
+    var currentMarbleSisIndex = marbleIndex - 1;
     var currentMarbleSis = this.dispenserArray[marbleRowIndex][marbleIndex - offset];
+    }
+
+
+
     var spliceNum = null;
     var firstLoop = true;
     var tempSpliceArray = [];
+    if (currentMarbleBroIndex === undefined || currentMarbleSisIndex === undefined){
+      if (gameMaster.player1.myTurn === true) {
+        tempSpliceArray = this.dispenserArray[marbleRowIndex].splice(marbleIndex, 1);
+        gameMaster.player1.hand = tempSpliceArray;
+        currentMarble.remove();
+        gameMaster.canEndTurn = true;
+        this.marbleMatch = false;
+        return;
+      }
+      else if (gameMaster.player2.myTurn === true){
+        tempSpliceArray = this.dispenserArray[marbleRowIndex].splice(marbleIndex, 1);
+        gameMaster.player2.hand = tempSpliceArray;
+        currentMarble.remove();
+        gameMaster.canEndTurn = true;
+        this.marbleMatch = false;
+        return;
+      }
+
+    }
+
     if (currentMarble.attr('class') !== currentMarbleBro.attr('class') || currentMarble.attr('class') !== currentMarbleSis.attr('class')){
       currentMarble.remove();
       if (gameMaster.player1.myTurn === true) {

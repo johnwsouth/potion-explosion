@@ -131,7 +131,7 @@ body {
 body {
   height: 100vh;
   width: 100vw;
-  background-image: url(../potionExplosion/images/metal-wall.jpg);
+  background-image: url("../g7_potionexplosion/images/metal-wall.jpg");
   opacity: 30%;
   background-position: center;
   background-size: cover;
@@ -183,7 +183,7 @@ body {
   position: relative;
   display: inline-block;
   flex-direction: column;
-  background-image: url(../potionExplosion/images/aromatic-red-cedar-sealed.jpg);
+  background-image: url("../g7_potionexplosion/images/aromatic-red-cedar-sealed.jpg");
   width: 10%;
   height: 100%;
   margin-left: 5px;
