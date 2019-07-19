@@ -1,0 +1,257 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.red {
+  height: 9%;
+  width: 50%;
+  background-color: red;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+
+}
+
+.yellow {
+  height: 9%;
+  width: 50%;
+  background-color: yellow;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+}
+
+.blue {
+  height: 9%;
+  width: 50%;
+  background-color: blue;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+}
+
+/* .row {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  background-image: url(../potionExplosion/images/aromatic-red-cedar-sealed.jpg);
+  width: 8%;
+  height: 100%;
+  margin-left: 10px;
+  border: 3px solid black;
+  transform: rotateX(180deg);
+} */
+
+.player {
+  position: absolute;
+  display: inline-block;
+  width: 25%;
+  height: 49%;
+  background-color: transparent;
+
+
+  vertical-align: text-bottom;
+  top: 20%
+
+
+}
+
+#player1{
+  top: 30%;
+  left: 43%;
+
+}
+
+#player2{
+  top: 30%;
+  right: 7%;
+}
+
+.player-points {
+  top: 22%;
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  display: block;
+  background-color: white;
+  font-family: cursive;
+  text-shadow: 2px 1px gray;
+  font-size: 20px;
+  border-style: double;
+  border-color: rebeccapurple;
+  border-width: 10px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px black;
+}
+
+/* .potion-container{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+} */
+.tile {
+  position: relative;
+  width: 100%;
+  height: 32%;
+
+}
+/* .red-tile{
+
+  background-color: red;
+}
+
+.blue-tile{
+  background-color: blue;
+}
+
+.yellow-tile{
+  background-color: yellow;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../potionExplosion/images/metal-wall.jpg);
+  opacity: 30%;
+  background-position: center;
+  background-size: cover;
+
+
+}
+
+.marbleDispenser {
+  height: 70%;
+  width: 60%;
+  display: inline-block;
+  top: 10%;
+  position: relative;
+  left: 5%;
+}
+
+.red {
+  height: 9%;
+  width: 50%;
+  background: repeating-radial-gradient(circle at 100%, #333, #333 10px, rgb(156, 32, 32) 10px, #eee 20px);
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+
+}
+
+.yellow {
+  height: 9%;
+  width: 50%;
+  background: repeating-radial-gradient(closest-side, #56a7ca, #ebf8e1, #aa35c7);
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+}
+
+.blue {
+  height: 9%;
+  width: 50%;
+  background: repeating-radial-gradient(#4b4b4b, #3f4bd4 20%);
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+
+}
+
+.row {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  background-image: url(../potionExplosion/images/aromatic-red-cedar-sealed.jpg);
+  width: 10%;
+  height: 100%;
+  margin-left: 5px;
+  border: 3px solid black;
+  transform: rotateX(180deg);
+  box-shadow: 10px 10px 5px black;
+}
+
+.potion-container {
+  top: 15%;
+
+  height: 30%;
+  width: 15%;
+  margin: auto;
+
+  background-color:transparent;
+  position: relative;
+
+}
+
+.red-tile {
+  box-shadow: 25px 10px 5px black;
+  width: 6vw;
+  height: 17vh;
+  background: repeating-radial-gradient(closest-side, #333 33%, rgb(156, 32, 32) 33%, #eee 34%);
+  display: block;
+  position: relative;
+  margin: auto;
+  border-radius: 0px 20px 0px 0px;
+  top: 25%;
+  left: 50%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 1px black;
+
+}
+
+.blue-tile {
+  box-shadow: 25px 10px 5px black;
+   width: 12vw;
+  height: 13vh;
+  background: repeating-radial-gradient(closest-side,#4b4b4b 34%, #3f4bd4 34%, #333 40%);
+  display: block;
+  position: relative;
+  margin: auto;
+  border-radius: 50px 50px 70px 70px;
+  top: 20%;
+  right: 20%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 1px black;
+}
+
+.yellow-tile {
+  box-shadow: 25px 10px 25px black;
+   width: 16vw;
+  height: 13vh;
+  background: repeating-radial-gradient(closest-side, #56a7ca 33%, #ebf8e1 33%, #aa35c7 40%);
+  display: block;
+  position: relative;
+  margin: auto;
+  border-radius: 60px 60px 80px 80px;
+  text-align: center;
+  right: 70%;
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 1px black;
+
+}
