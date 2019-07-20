@@ -1,51 +1,3 @@
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-
-.red {
-  height: 9%;
-  width: 50%;
-  background-color: red;
-  margin: 10px auto;
-  position: relative;
-  border-radius: 50%;
-
-
-}
-
-.yellow {
-  height: 9%;
-  width: 50%;
-  background-color: yellow;
-  margin: 10px auto;
-  position: relative;
-  border-radius: 50%;
-
-}
-
-.blue {
-  height: 9%;
-  width: 50%;
-  background-color: blue;
-  margin: 10px auto;
-  position: relative;
-  border-radius: 50%;
-
-}
-
-/* .row {
-  position: relative;
-  display: inline-block;
-  flex-direction: column;
-  background-image: url(../potionExplosion/images/aromatic-red-cedar-sealed.jpg);
-  width: 8%;
-  height: 100%;
-  margin-left: 10px;
-  border: 3px solid black;
-  transform: rotateX(180deg);
-} */
 
 .player {
   position: absolute;
@@ -53,11 +5,8 @@ body {
   width: 25%;
   height: 49%;
   background-color: transparent;
-
-
   vertical-align: text-bottom;
   top: 20%
-
 
 }
 
@@ -86,55 +35,25 @@ body {
   border-color: rebeccapurple;
   border-width: 10px;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 45px blanchedalmond;
 }
 
-/* .potion-container{
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  height: 50%;
-  background-color: white;
-} */
 .tile {
   position: relative;
   width: 100%;
   height: 32%;
 
 }
-/* .red-tile{
-
-  background-color: red;
-}
-
-.blue-tile{
-  background-color: blue;
-}
-
-.yellow-tile{
-  background-color: yellow;
-}
- */
-
-
-
-
-
-
-
-
-
-
-
-
 
 body {
   height: 100vh;
   width: 100vw;
-  background-image: url("../g7_potionexplosion/images/metal-wall.jpg");
+  background-image: url("../g7_potionexplosion/images/gameBackground3.jpg");
   opacity: 30%;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  filter: drop-shadow
+
 
 
 }
@@ -146,15 +65,24 @@ body {
   top: 10%;
   position: relative;
   left: 5%;
+
 }
 
 .red {
   height: 9%;
   width: 50%;
-  background: repeating-radial-gradient(circle at 100%, #333, #333 10px, rgb(156, 32, 32) 10px, #eee 20px);
+  background-image: url("../g7_potionexplosion/images/redMarb.gif");
   margin: 10px auto;
   position: relative;
   border-radius: 50%;
+
+
+  background-size: 73px;
+  background-position-x: -11px;
+  background-position-y: -7px;
+  background-repeat:no-repeat;
+  border-width: .5px;
+
 
 
 }
@@ -162,21 +90,37 @@ body {
 .yellow {
   height: 9%;
   width: 50%;
-  background: repeating-radial-gradient(closest-side, #56a7ca, #ebf8e1, #aa35c7);
+  /* background: repeating-radial-gradient(closest-side, #56a7ca, #ebf8e1, #aa35c7); */
+  background-image: url("../g7_potionexplosion/images/yellowTile2.gif");
+  /* background-image: url("../g7_potionexplosion/images/yellowMarb.gif"); */
   margin: 10px auto;
   position: relative;
   border-radius: 50%;
+  border-style: solid;
+  border-color: blanchedalmond;
+  border-width: .5px;
+  background-position: center;
 
 }
 
 .blue {
   height: 9%;
   width: 50%;
-  background: repeating-radial-gradient(#4b4b4b, #3f4bd4 20%);
+  background-image: url("../g7_potionexplosion/images/greenMarb.gif");
+  background-position: center;
+  background-size: contain;
   margin: 10px auto;
   position: relative;
   border-radius: 50%;
 
+  border-style: solid;
+  border-color: blanchedalmond;
+  border-width: .5px;
+
+}
+
+.marble {
+  box-shadow: 6px 4px 10px blanchedalmond;
 }
 
 .row {
@@ -189,7 +133,7 @@ body {
   margin-left: 5px;
   border: 3px solid black;
   transform: rotateX(180deg);
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 45px blanchedalmond;
 }
 
 .potion-container {
@@ -205,10 +149,10 @@ body {
 }
 
 .red-tile {
-  box-shadow: 25px 10px 5px black;
+  box-shadow: 25px 10px 40px blanchedalmond;
   width: 6vw;
   height: 17vh;
-  background: repeating-radial-gradient(closest-side, #333 33%, rgb(156, 32, 32) 33%, #eee 34%);
+  background-image: url("../g7_potionexplosion/images/redTile.gif");
   display: block;
   position: relative;
   margin: auto;
@@ -219,14 +163,16 @@ body {
   font-size: 40px;
   color: white;
   text-shadow: 3px 1px black;
+  background-size: cover;
+  background-position: bottom;
 
 }
 
 .blue-tile {
-  box-shadow: 25px 10px 5px black;
+  box-shadow: 25px 10px 40px blanchedalmond;
    width: 12vw;
   height: 13vh;
-  background: repeating-radial-gradient(closest-side,#4b4b4b 34%, #3f4bd4 34%, #333 40%);
+  background-image: url("../g7_potionexplosion/images/greenMarb.gif");
   display: block;
   position: relative;
   margin: auto;
@@ -236,14 +182,19 @@ body {
   text-align: center;
   font-size: 40px;
   color: white;
-  text-shadow: 3px 1px black;
+  background-position: center;
+  background-size: contain;
+
 }
 
 .yellow-tile {
-  box-shadow: 25px 10px 25px black;
+  box-shadow: 25px 10px 40px blanchedalmond;
    width: 16vw;
   height: 13vh;
-  background: repeating-radial-gradient(closest-side, #56a7ca 33%, #ebf8e1 33%, #aa35c7 40%);
+  /* background: repeating-radial-gradient(closest-side, #56a7ca 30%, #ebf8e1 15%, #aa35c7 80%); */
+
+
+  background-image: url("../g7_potionexplosion/images/yellowTile2.gif");
   display: block;
   position: relative;
   margin: auto;
@@ -253,5 +204,86 @@ body {
   font-size: 40px;
   color: white;
   text-shadow: 3px 1px black;
+  background-position: center;
+
 
 }
+
+
+
+
+#smoke{
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+	left: 58%; bottom: 60%;
+}
+
+
+
+#smoke span {
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 35px solid #4b4b4b;
+	border-radius: 35px;
+	left: -14px; opacity: 0;
+	transform: scale(0.2);
+}
+
+
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.6) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(3) translate(-20px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.6) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(3) translate(20px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+
+#smoke2 {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+	left: 83%; bottom: 60%;
+}
+
+
+
+#smoke2 span {
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 35px solid #4b4b4b;
+	border-radius: 35px;
+	left: -14px; opacity: 0;
+	transform: scale(0.2);
+}
+
+#smoke2 .s0 { animation: smokeL 10s 0s infinite }
+#smoke2 .s1 { animation: smokeR 10s 1s infinite }
+#smoke2 .s2 { animation: smokeL 10s 2s infinite }
+#smoke2 .s3 { animation: smokeR 10s 3s infinite }
+#smoke2 .s4 { animation: smokeL 10s 4s infinite }
+#smoke2 .s5 { animation: smokeR 10s 5s infinite }
+#smoke2 .s6 { animation: smokeL 10s 6s infinite }
+#smoke2 .s7 { animation: smokeR 10s 7s infinite }
+#smoke2 .s8 { animation: smokeL 10s 8s infinite }
+#smoke2 .s9 { animation: smokeR 10s 9s infinite }

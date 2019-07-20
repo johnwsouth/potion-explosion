@@ -6,11 +6,6 @@ class GameMaster {
     this.gameStartPotIndex = 1;
     this.canEndTurn = false;
 
-
-
-
-
-
   }
 
     gameStartTurn(){

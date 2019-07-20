@@ -6,6 +6,4 @@ function initializeApp(){
   gameMaster.gameStartRender();
   gameMaster.dispenser.marbleClick();
 
-
-
 }
