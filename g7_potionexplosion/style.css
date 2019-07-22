@@ -10,6 +10,14 @@
 
 }
 
+.player-instruction{
+  height: 15%;
+  width: 100%;
+  font-size: 17px;
+  position: absolute;
+  top: 50%
+}
+
 #player1{
   top: 30%;
   left: 43%;
@@ -27,12 +35,13 @@
   height: 30%;
   position: absolute;
   display: block;
-  background-color: white;
-  font-family: cursive;
+  background-color: darkolivegreen;
+  color: white;
+  font-family: Arial;
   text-shadow: 2px 1px gray;
   font-size: 20px;
   border-style: double;
-  border-color: rebeccapurple;
+  border-color: black;
   border-width: 10px;
   border-radius: 15px;
   box-shadow: 10px 10px 45px blanchedalmond;
@@ -52,7 +61,6 @@ body {
   opacity: 30%;
   background-position: center;
   background-size: contain;
-  filter: drop-shadow
 
 
 
@@ -79,7 +87,7 @@ body {
 
   background-size: 73px;
   background-position-x: -11px;
-  background-position-y: -7px;
+  background-position-y: -6.3px;
   background-repeat:no-repeat;
   border-width: .5px;
 
@@ -142,9 +150,10 @@ body {
   height: 30%;
   width: 15%;
   margin: auto;
-
+  font-family: fantasy;
   background-color:transparent;
   position: relative;
+  text-shadow: 2px 1px black;
 
 }
 
@@ -209,81 +218,106 @@ body {
 
 }
 
+.popAnimation{
+  animation-name: pop;
+  animation-duration: 2s;
+}
+@keyframes pop{
+  0% {
+    color: black;
+    font-size: 1em;
+  }
+  33%{
+    color: red;
+    font-size: 1.18em;
+  }
+  100%{
+    color: red;
+    font-size: 1em;
+  }
+}
 
 
 
 #smoke{
 	position: absolute;
-	z-index: 3;
-	width: 1px; height: 160px;
-	left: 58%; bottom: 60%;
+	z-index: 2;
+	width: 20%; height: 23%;
+  left: 50.5%; bottom: 58.5%;
+  background-image: url("../g7_potionexplosion/images/smoke.gif");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position-y: -30px;
 }
 
-
-
-#smoke span {
-  display: block;
-	position: absolute;
-	bottom: -35px; left: 50%; margin-left:-20px;
-	height: 0px; width: 0px;
-	border: 35px solid #4b4b4b;
-	border-radius: 35px;
-	left: -14px; opacity: 0;
-	transform: scale(0.2);
-}
-
-
-
-@keyframes smokeL {
-	0%   { transform: scale(0.2) translate(0, 0) }
-	10%  { opacity: 1; transform: scale(0.6) translate(0, -5px) }
-	100% { opacity: 0; transform: scale(3) translate(-20px, -130px) }
-}
-
-@keyframes smokeR {
-	0%   { transform: scale(0.2) translate(0, 0) }
-	10%  { opacity: 1; transform: scale(0.6) translate(0, -5px) }
-	100% { opacity: 0; transform: scale(3) translate(20px, -130px) }
-}
-
-#smoke .s0 { animation: smokeL 10s 0s infinite }
-#smoke .s1 { animation: smokeR 10s 1s infinite }
-#smoke .s2 { animation: smokeL 10s 2s infinite }
-#smoke .s3 { animation: smokeR 10s 3s infinite }
-#smoke .s4 { animation: smokeL 10s 4s infinite }
-#smoke .s5 { animation: smokeR 10s 5s infinite }
-#smoke .s6 { animation: smokeL 10s 6s infinite }
-#smoke .s7 { animation: smokeR 10s 7s infinite }
-#smoke .s8 { animation: smokeL 10s 8s infinite }
-#smoke .s9 { animation: smokeR 10s 9s infinite }
 
 #smoke2 {
 	position: absolute;
-	z-index: 3;
-	width: 1px; height: 160px;
-	left: 83%; bottom: 60%;
+	z-index: 2;
+	width: 10%; height: 23%;
+  left: 76%; bottom: 58.5%;
+  background-image: url("../g7_potionexplosion/images/smoke.gif");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position-y: -30px;
+
 }
 
-
-
-#smoke2 span {
-  display: block;
-	position: absolute;
-	bottom: -35px; left: 50%; margin-left:-20px;
-	height: 0px; width: 0px;
-	border: 35px solid #4b4b4b;
-	border-radius: 35px;
-	left: -14px; opacity: 0;
-	transform: scale(0.2);
+.wally{
+  background-image: url("./images/wally.gif");
+  height: 65%;
+  width: 50%;
+  position: absolute;
+  z-index: 3;
+  left: 0%;
+  bottom: -40px;
+  background-size: contain;
 }
 
-#smoke2 .s0 { animation: smokeL 10s 0s infinite }
-#smoke2 .s1 { animation: smokeR 10s 1s infinite }
-#smoke2 .s2 { animation: smokeL 10s 2s infinite }
-#smoke2 .s3 { animation: smokeR 10s 3s infinite }
-#smoke2 .s4 { animation: smokeL 10s 4s infinite }
-#smoke2 .s5 { animation: smokeR 10s 5s infinite }
-#smoke2 .s6 { animation: smokeL 10s 6s infinite }
-#smoke2 .s7 { animation: smokeR 10s 7s infinite }
-#smoke2 .s8 { animation: smokeL 10s 8s infinite }
-#smoke2 .s9 { animation: smokeR 10s 9s infinite }
+.explosion{
+  background-image: url("./images/explosion.gif");
+  height: 80%;
+  width: 30%;
+  position: absolute;
+
+  z-index: 3;
+  background-size: cover;
+  background-position-x: -40px;
+  background-position-y: -30px;
+}
+
+#explosion1{
+  left: 44%;
+  top: 30%;
+}
+
+#explosion2{
+  left: 71%;
+  top: 30%;
+}
+
+.hand{
+
+  height: 10%;
+  width: 10%;
+  position:absolute;
+
+
+}
+
+.hand > .marble{
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-right: 2px;
+}
+
+#hand1{
+  left: 43.5%;
+  top: 30%;
+}
+
+#hand2{
+  left: 68.5%;
+  top: 30%;
+}

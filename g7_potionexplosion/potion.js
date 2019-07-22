@@ -53,6 +53,18 @@ class Potion {
       debugger;
       $("[data-player="+playerNumber+"]").remove();
       if (playerNumber === "1"){
+        var wally = $("<div>");
+        var explosionDiv = $("<div>");
+        wally.addClass('wally');
+        explosionDiv.addClass('explosion')
+        explosionDiv.attr("id", "explosion1");
+        $("body").append(wally);
+        $("body").append(explosionDiv);
+        setTimeout(function () {
+          $("#explosion1").remove()
+          $(".wally").remove();
+        }, 3000);
+
         var redMax = gameMaster.player1Potion.redMarbleMax;
         var blueMax = gameMaster.player1Potion.blueMarbleMax;
         var yellowMax = gameMaster.player1Potion.yellowMarbleMax;
@@ -98,6 +110,19 @@ class Potion {
       }
 
       else if (playerNumber === "2") {
+        var wally = $("<div>");
+        var explosionDiv = $("<div>");
+        wally.addClass('wally');
+        explosionDiv.addClass('explosion')
+        explosionDiv.attr("id","explosion2");
+        $("body").append(wally);
+        $("body").append(explosionDiv);
+        setTimeout(function(){
+          $("#explosion2").remove()
+          $(".wally").remove();
+        },3000);
+
+
         var redMax = gameMaster.player2Potion.redMarbleMax;
         var blueMax = gameMaster.player2Potion.blueMarbleMax;
         var yellowMax = gameMaster.player2Potion.yellowMarbleMax;
@@ -147,6 +172,7 @@ class Potion {
     handleClick(){
 
       if (gameMaster.player1.myTurn === true){
+        $(".hand").empty();
         debugger;
         for(var i = 0 ; i < gameMaster.player1.hand.length ;  i++){
           if (gameMaster.player1.hand[i].hasClass("red") && gameMaster.player1Potion.redMarbleCurrentVal < gameMaster.player1Potion.redMarbleMax){
@@ -168,6 +194,7 @@ class Potion {
         }
       }
       else if (gameMaster.player2.myTurn === true) {
+        $(".hand").empty();
         for (var i = 0; i < gameMaster.player2.hand.length; i++) {
           if (gameMaster.player2.hand[i].hasClass("red") &&gameMaster.player2Potion.redMarbleCurrentVal < gameMaster.player2Potion.redMarbleMax) {
             gameMaster.player2.hand.splice(i, 1);

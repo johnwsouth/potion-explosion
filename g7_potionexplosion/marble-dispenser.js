@@ -28,7 +28,8 @@ class MarbleDispenser {
       for (var j = 0; j < 9; j++) {
         this.randomizeMarbles();
         var color = this.masterHolder[j];
-        var marble = $("<div>").addClass(color + ' marble');
+        var marble = $("<div>").addClass("marble");
+        marble.addClass(color);
 
         rowArray.push(marble);
         $(row).append(marble);
@@ -45,7 +46,6 @@ class MarbleDispenser {
     console.log("This is the current display array: ", this.dispenserArray)
 
     this.marbleMatch = true;
-
     console.log('DA:', this);
     var offset = 1;
     var currentMarble = $(event.currentTarget);
@@ -63,9 +63,9 @@ class MarbleDispenser {
 
 
     var spliceNum = null;
-    var firstLoop = true;
+    var loop = 0;
     var tempSpliceArray = [];
-    if (currentMarbleBroIndex === undefined || currentMarbleSisIndex === undefined){
+    if (currentMarbleBro === undefined || currentMarbleSis === undefined){
       if (gameMaster.player1.myTurn === true && marbleRowIndex > -1 && marbleRowIndex < 9) {
         tempSpliceArray = this.dispenserArray[marbleRowIndex].splice(marbleIndex, 1);
         gameMaster.player1.hand = tempSpliceArray;
@@ -84,9 +84,10 @@ class MarbleDispenser {
       }
 
     }
-
+    if(currentMarbleBro !== undefined && currentMarbleSis !== undefined){
     if (currentMarble.attr('class') !== currentMarbleBro.attr('class') || currentMarble.attr('class') !== currentMarbleSis.attr('class')){
       currentMarble.remove();
+    }
       if (gameMaster.player1.myTurn === true) {
 
 
@@ -114,12 +115,10 @@ class MarbleDispenser {
     }
 
 
-    while(this.marbleMatch){
+    while(this.marbleMatch && currentMarbleBro !== undefined && currentMarbleSis !== undefined){
       currentMarbleBro = this.dispenserArray[marbleRowIndex][marbleIndex + offset];
       currentMarbleSis = this.dispenserArray[marbleRowIndex][marbleIndex - offset];
-      if (currentMarbleSisIndex -1 > -1 && !firstLoop){
-      currentMarbleSisIndex -= 1
-      }
+
 
       if (currentMarbleBro.attr('class')  === currentMarbleSis.attr('class')) {
 
@@ -147,10 +146,17 @@ class MarbleDispenser {
         this.marbleMatch = false;
 
         }
-        firstLoop = false;
+      if (currentMarbleSisIndex - 1 > -1 && loop === 0) {
+        currentMarbleSisIndex = marbleIndex -1;
+      }
+      else if (currentMarbleSisIndex - 1 > -1 && loop >= 1){
+        currentMarbleSisIndex = marbleIndex - offset + 1;
+      }
+        loop += 1 ;
 
       }
 
+    if (currentMarbleBro !== undefined && currentMarbleSis !== undefined){
     tempSpliceArray = this.dispenserArray[marbleRowIndex].splice(currentMarbleSisIndex, spliceNum)
     gameMaster.canEndTurn = true;
 
@@ -167,9 +173,11 @@ class MarbleDispenser {
       for (var i = 0; i < tempSpliceArray.length; i++) {
         gameMaster.player2.hand.push(tempSpliceArray[i]);
       }
-
-
+    }
   }
+
+  gameMaster.updatePlayerHandDisplay();
+  e.stopPropagation();
   return;
 }
 
