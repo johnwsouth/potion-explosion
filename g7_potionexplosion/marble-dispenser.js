@@ -14,7 +14,6 @@ class MarbleDispenser {
       tempArray.push(randMarble);
       this.masterHolder.splice(randNum, 1);
     }
-
     this.masterHolder = tempArray;
   }
 
@@ -39,7 +38,6 @@ class MarbleDispenser {
     }
     return this.dispenserArray;
   }
-
 
   marbleHandler(event) {
 
@@ -177,11 +175,10 @@ class MarbleDispenser {
   }
 
   gameMaster.updatePlayerHandDisplay();
-  e.stopPropagation();
   return;
 }
 
   marbleClick() {
-    $(".marble").on('click', this.marbleHandler);
+    $(".marble").off('click').on('click', this.marbleHandler);
   }
 }

@@ -270,8 +270,9 @@ body {
   position: absolute;
   z-index: 3;
   left: 0%;
-  bottom: -40px;
+  bottom: -50px;
   background-size: contain;
+
 }
 
 .explosion{

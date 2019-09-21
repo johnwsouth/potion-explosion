@@ -11,7 +11,6 @@ class NewPlayer{
 
   render(){
     this.playerTile = $("<div>");
-    //this.playerTile.attr("data-player",this.playerNumber);
     this.playerTile.addClass("player");
     this.playerTile.attr("id","player"+this.playerNumber);
 

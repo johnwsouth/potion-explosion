@@ -36,7 +36,6 @@ class GameMaster {
       }
     }
     endTurn() {
-      debugger;
       if (gameMaster.player1.myTurn === true) {
 
       gameMaster.player1.myTurn = false;

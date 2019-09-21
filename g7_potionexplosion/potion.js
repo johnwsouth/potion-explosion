@@ -50,7 +50,6 @@ class Potion {
     }
 
     removePotion(playerNumber){
-      debugger;
       $("[data-player="+playerNumber+"]").remove();
       if (playerNumber === "1"){
         var wally = $("<div>");
@@ -173,7 +172,6 @@ class Potion {
 
       if (gameMaster.player1.myTurn === true){
         $(".hand").empty();
-        debugger;
         for(var i = 0 ; i < gameMaster.player1.hand.length ;  i++){
           if (gameMaster.player1.hand[i].hasClass("red") && gameMaster.player1Potion.redMarbleCurrentVal < gameMaster.player1Potion.redMarbleMax){
             gameMaster.player1.hand.splice(i,1);
@@ -226,7 +224,6 @@ class Potion {
     }
 
     updateDisplay(){
-      debugger;
       var player1 = $("[data-player='1']");
       if (gameMaster.player1.myTurn === true){
         player1.children("div:nth-child(1)").text("" + gameMaster.player1Potion.redMarbleCurrentVal + "/" + gameMaster.player1Potion.redMarbleMax);
